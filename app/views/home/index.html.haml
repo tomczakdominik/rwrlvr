@@ -1,6 +1,74 @@
-.row
-  .col-md-4
-  .col-md-4
-    .btn-default.btn
-    Test
-  .col-md-4
+!!!
+%body
+  .container
+    .row
+      .box
+        .col-lg-12.text-center
+          #carousel-example-generic.carousel.slide
+            / Indicators
+            %ol.carousel-indicators.hidden-xs
+              %li.active{"data-slide-to" => "0", "data-target" => "#carousel-example-generic"}
+              %li{"data-slide-to" => "1", "data-target" => "#carousel-example-generic"}
+              %li{"data-slide-to" => "2", "data-target" => "#carousel-example-generic"}
+            / Wrapper for slides
+            .carousel-inner
+              .item.active
+                %img.img-responsive.img-full{:alt => "", :src => "images/slide-1.jpg"}
+              .item
+                %img.img-responsive.img-full{:alt => "", :src => "images/slide-2.jpg"}
+              .item
+                %img.img-responsive.img-full{:alt => "", :src => "images/slide-3.jpg"}
+            / Controls
+            %a.left.carousel-control{"data-slide" => "prev", :href => "#carousel-example-generic"}
+              %span.icon-prev
+            %a.right.carousel-control{"data-slide" => "next", :href => "#carousel-example-generic"}
+              %span.icon-next
+          %h2.brand-before
+            %small Welcome to
+          %h1.brand-name Business Casual
+          %hr.tagline-divider
+            %h2
+              %small
+                By
+                %strong Start Bootstrap
+    .row
+      .box
+        .col-lg-12
+          %hr
+            %h2.intro-text.text-center
+              Build a website
+              %strong worth visiting
+            %hr
+              %img.img-responsive.img-border.img-left.img-small{:alt => "", :src => "images/logo1.jpg"}
+                %hr.visible-xs
+                  %p Rowerlover to wrocławski projekt powstały z miłości i pasji do jednośladów. Chcielibyśmy,aby nasze rowery cieszyły na co dzień a nie tylko podczas niedzielnej przejażdżki. Jako pasjonaci dwóch kółek wielokrotnie nie potrafiliśmy przejść obojętnie obok wielu zapomnianych klasyków. Wiedząc,że rowery te budowane były na lata a ich styl i klasyczna linia są ponadczasowe podejmujemy się zadania przekształcenia zaniedbanej poczwarki w pięknego motyla– ze świetnymi rezultatami,nierzadko w jedynym i niepowtarzalnym egzemplarzu! W naszej ofercie znajdziecie Państwo dystyngowane miejskie rowery holenderskie,fantazyjne cruisery oraz szybko i dzielnie pokonujące zatłoczone miasta rowery szosowe oraz ostre koła. Zapraszamy!
+                  %p
+                    A huge thanks to
+                    %a{:href => "http://join.deathtothestockphoto.com/", :target => "_blank"} Death to the Stock Photo
+                    for allowing us to use the beautiful photos that make this template really come to life. When using this template, make sure your photos are decent. Also make sure that the file size on your photos is kept to a minumum to keep load times to a minimum.
+                  %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat diam quis nisl vestibulum dignissim. In hac habitasse platea dictumst. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+    .row
+      .box
+        .col-lg-12
+          %hr
+            %h2.intro-text.text-center
+              Beautiful boxes
+              %strong to showcase your content
+            %hr
+              %p Use as many boxes as you like, and put anything you want in them! They are great for just about anything, the sky's the limit!
+              %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat diam quis nisl vestibulum dignissim. In hac habitasse platea dictumst. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+  / /.container
+  %footer
+    .container
+      .row
+        .col-lg-12.text-center
+          %p Copyright &copy; Your Website 2014
+  / jQuery
+  %script{:src => "js/jquery.js"}
+  / Bootstrap Core JavaScript
+  %script{:src => "js/bootstrap.min.js"}
+  / Script to Activate the Carousel
+  :javascript
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
